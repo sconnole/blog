@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "https://sconnole.github.io/blog/",
             "outputPath": "dist/blog",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -34,6 +33,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/blog/",
               "budgets": [
                 {
                   "type": "initial",
