@@ -7,11 +7,7 @@ import { MarkdownModule } from 'ngx-markdown';
   standalone: true,
   imports: [CommonModule, MarkdownModule],
   selector: 'app-post-detail',
-  template: `
-    <div class="prose dark:prose-invert max-w-3xl mx-auto p-6">
-      <markdown [src]="markdownPath"></markdown>
-    </div>
-  `,
+  templateUrl: './post-detail.component.html',
 })
 export class PostDetailComponent {
   slug: string = '';
