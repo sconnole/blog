@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+.markdown-prose {
+  @apply text-gray-800 max-w-3xl mx-auto leading-relaxed text-base;
+}
+
+.markdown-prose h1 {
+  @apply text-3xl font-bold mt-8 mb-4;
+}
+
+.markdown-prose h2 {
+  @apply text-2xl font-semibold mt-6 mb-3;
+}
+
+.markdown-prose h3 {
+  @apply text-xl font-semibold mt-4 mb-2;
+}
+
+.markdown-prose p {
+  @apply mb-4;
+}
+
+.markdown-prose ul {
+  @apply list-disc list-inside mb-4 pl-4;
+}
+
+.markdown-prose ol {
+  @apply list-decimal list-inside mb-4 pl-4;
+}
+
+.markdown-prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-6;
+}
+
+.markdown-prose pre {
+  @apply bg-gray-100 text-sm p-4 rounded overflow-x-auto mb-4;
+}
+
+.markdown-prose code {
+  @apply bg-gray-200 px-1 py-0.5 rounded text-sm font-mono;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-prose {
+    @apply text-gray-100;
+  }
+
+  .markdown-prose blockquote {
+    @apply border-gray-600 text-gray-400;
+  }
+
+  .markdown-prose pre {
+    @apply bg-gray-800 text-gray-100;
+  }
+
+  .markdown-prose code {
+    @apply bg-gray-700 text-gray-100;
+  }
+}

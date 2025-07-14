@@ -7,6 +7,7 @@ import { MarkdownModule } from 'ngx-markdown';
   standalone: true,
   imports: [CommonModule, MarkdownModule],
   selector: 'app-post-detail',
+  styleUrls: ['./post-detail.component.css'],
   templateUrl: './post-detail.component.html',
 })
 export class PostDetailComponent {
