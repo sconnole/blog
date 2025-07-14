@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { PostService } from '../services/post.service';
+import { Post } from '../models/post';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  posts: Post[] = [];
 
+  constructor(private postService: PostService) {}
+
+  ngOnInit(): void {
+    this.postService.getPosts().subscribe((data) => {
+      this.posts = data.sort((a, b) => b.date.localeCompare(a.date));
+    });
+  }
 }

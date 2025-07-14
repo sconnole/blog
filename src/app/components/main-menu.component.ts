@@ -8,23 +8,7 @@ import { Post } from '../models/post';
   selector: 'app-main-menu',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: `
-    <aside
-      class="bg-gray-100 dark:bg-gray-800 p-4 w-full sm:w-64 sm:sticky top-0 sm:h-screen"
-    >
-      <h2 class="text-xl font-semibold mb-4 dark:text-white">Blog Posts</h2>
-      <ul class="space-y-2">
-        <li *ngFor="let post of posts">
-          <a
-            [routerLink]="['/posts', post.slug]"
-            class="text-blue-600 dark:text-blue-400 hover:underline block"
-          >
-            {{ post.title }}
-          </a>
-        </li>
-      </ul>
-    </aside>
-  `,
+  templateUrl: './main-menu.component.html',
 })
 export class MainMenuComponent implements OnInit {
   posts: Post[] = [];
