@@ -12,11 +12,12 @@ import { MarkdownModule } from 'ngx-markdown';
 })
 export class PostDetailsComponent {
   slug: string = '';
-  get markdownPath(): string {
-    return `assets/posts/${this.slug}.md`;
-  }
+  markdownPath: string = '';
 
   constructor(private route: ActivatedRoute) {
-    this.slug = this.route.snapshot.paramMap.get('slug') ?? '';
+    this.route.paramMap.subscribe((params) => {
+      this.slug = params.get('slug') ?? '';
+      this.markdownPath = `assets/posts/${this.slug}.md`;
+    });
   }
 }
