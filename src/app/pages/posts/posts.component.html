@@ -1,0 +1,30 @@
+<div class="min-h-screen px-6 py-12 bg-gradient-to-br from-indigo-100 via-white to-pink-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-700 dark:text-indigo-300 drop-shadow-lg">
+      ✨ Welcome to Sean's Thoughts ✨
+    </h1>
+    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+      Thoughts, Being a Dad, Funny Stories, Family History
+    </p>
+  </div>
+
+  <div class="mt-12 max-w-3xl mx-auto grid gap-6">
+    <div
+      *ngFor="let post of posts"
+      class="group rounded-lg border border-gray-300 dark:border-gray-700 p-6 bg-white dark:bg-gray-800 hover:bg-indigo-50 dark:hover:bg-indigo-900 transition-all shadow hover:shadow-lg"
+    >
+      <a [routerLink]="['/posts', post.slug]">
+        <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-300 group-hover:underline">
+          {{ post.title }}
+        </h2>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          {{ post.date | date:'mediumDate' }}
+        </p>
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-20 text-center text-sm text-gray-500 dark:text-gray-600">
+    Built with 🧡 using Angular, Tailwind, and Markdown
+  </div>
+</div>

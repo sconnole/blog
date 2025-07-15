@@ -1,5 +1,15 @@
 [
   {
+    "title": "Funny story",
+    "slug": "funny-story",
+    "date": "2025-07-15"
+  },
+  {
+    "title": "Why do the work?",
+    "slug": "why-do-the-work",
+    "date": "2025-07-14"
+  },
+  {
     "title": "Hello World",
     "slug": "hello-world",
     "date": "2025-07-14"

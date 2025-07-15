@@ -5,8 +5,28 @@
   routerLink="/"
   class="block text-xl font-semibold mb-4 dark:text-white hover:underline hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
 >
-  Blog Posts
+  Home
 </a>
+  <hr class="border-t border-gray-300 dark:border-gray-600 my-6" />
+<a
+  routerLink="stories"
+  class="block text-xl font-semibold mb-4 dark:text-white hover:underline hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+>
+  Stories
+</a>
+   <ul class="space-y-2">
+    <li *ngFor="let story of stories">
+      <a
+        [routerLink]="['/stories', story.slug]"
+        class="text-blue-600 dark:text-blue-400 hover:underline block"
+      >
+        {{ story.title }}
+      </a>
+    </li>
+  </ul>
+  <hr class="border-t border-gray-300 dark:border-gray-600 my-6" />
+  <a routerLink="/posts"   class="block text-xl font-semibold mb-4 dark:text-white hover:underline hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+>Blog Posts</a>
   <ul class="space-y-2">
     <li *ngFor="let post of posts">
       <a

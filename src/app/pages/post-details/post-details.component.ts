@@ -7,10 +7,10 @@ import { MarkdownModule } from 'ngx-markdown';
   standalone: true,
   imports: [CommonModule, MarkdownModule],
   selector: 'app-post-detail',
-  styleUrls: ['./post-detail.component.css'],
-  templateUrl: './post-detail.component.html',
+  styleUrls: ['./post-details.component.css'],
+  templateUrl: './post-details.component.html',
 })
-export class PostDetailComponent {
+export class PostDetailsComponent {
   slug: string = '';
   get markdownPath(): string {
     return `assets/posts/${this.slug}.md`;
